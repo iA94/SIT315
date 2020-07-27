@@ -1,0 +1,22 @@
+int input = 2;
+int val = 0;
+int ledpin=3;
+void setup()
+{
+  pinMode(input, INPUT);
+  pinMode(ledpin, OUTPUT);
+  Serial.begin(9600);
+  
+}
+
+void loop()
+{
+ val = digitalRead(input);
+  if (val == 1){
+    
+    digitalWrite(ledpin,HIGH);
+  }else{
+    digitalWrite(ledpin,LOW);
+       }
+  Serial.println(val);
+}
